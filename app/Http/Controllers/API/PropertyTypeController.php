@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\PropertyType;
 use Illuminate\Http\Request;
 
 class PropertyTypeController extends Controller
@@ -14,7 +15,7 @@ class PropertyTypeController extends Controller
      */
     public function index()
     {
-        //
+        return PropertyType::all();
     }
 
     /**
