@@ -51,6 +51,7 @@ database = airbnb
 php artisan key:generate
 php artisan migrate
 php artisan storage:link
+```
 
 ## Code of Conduct
 
