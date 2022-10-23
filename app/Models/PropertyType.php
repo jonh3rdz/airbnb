@@ -12,5 +12,7 @@ class PropertyType extends Model
     protected $fillable = [
         'title',
         'description',
+        'icon_image',
+        'status',
     ];
 }
