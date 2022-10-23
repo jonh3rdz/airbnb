@@ -15,4 +15,10 @@ class PropertyType extends Model
         'icon_image',
         'status',
     ];
+
+    protected $hidden = [
+        'id',
+        'created_at',
+        'updated_at'
+    ];
 }
