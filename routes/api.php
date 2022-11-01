@@ -11,5 +11,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('v1/propertiestypes', [PropertyTypeController::class,'index']);
 Route::post('v1/propertiestypes', [PropertyTypeController::class,'store']);
 Route::get('v1/propertiestypes/{propertyType}', [PropertyTypeController::class,'show']);
+Route::put('v1/propertiestypes/{propertyType}', [PropertyTypeController::class,'update']);
 Route::delete('v1/propertiestypes/{propertyType}', [PropertyTypeController::class,'destroy']);
 //Route::apiResource('v1/propertiestypes', App\Http\Controllers\API\V1\PropertyTypeController::class);

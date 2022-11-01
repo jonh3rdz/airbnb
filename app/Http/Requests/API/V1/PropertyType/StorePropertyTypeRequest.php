@@ -26,7 +26,7 @@ class StorePropertyTypeRequest extends FormRequest
         return [
             'title' => 'required|max:255',
             'description' => 'required|max:255',
-            'icon_image' => 'required|image',
+            'icon_image' => 'required',
             'status' => '',
         ];
     }
@@ -36,7 +36,6 @@ class StorePropertyTypeRequest extends FormRequest
         return [
             'title.required'    => 'El titulo es requerido.',
             'description.required'    => 'La description es requerido.',
-            'icon_image.required'    => 'El icon_image es requerido.',
         ];
     }
 }

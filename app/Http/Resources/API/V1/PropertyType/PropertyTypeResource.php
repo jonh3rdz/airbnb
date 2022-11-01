@@ -19,7 +19,7 @@ class PropertyTypeResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'icon_image' => $this->icon_image,
-            //'status' => $this->status,
+            'status' => $this->status,
             'created_at' => $this->published_at,
             /*'author' => [
                 'name' => $this->user->name,
