@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\API\V1;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,8 +17,18 @@ class PropertyType extends Model
     ];
 
     protected $hidden = [
-        'id',
+        //'id',
         'created_at',
         'updated_at'
     ];
+
+    public function getPublishedAtAttribute()
+    {
+        return $this->created_at->format('d/m/Y');
+    }
+
+    /*public function user()
+    {
+        return $this->belongsTo(User::class);
+    }*/
 }

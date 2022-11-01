@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('property_types', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->string("icon_image");
-            $table->string("status");
+            $table->text('description')->nullable();
+            $table->string('icon_image')->nullable();
+            $table->string('status')->nullable()->default(1);
             $table->timestamps();
         });
     }
