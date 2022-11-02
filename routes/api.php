@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\API\V1\CountriesController as CountriesV1;
+use App\Http\Controllers\API\V1\CountryController as CountryV1;
 use App\Http\Controllers\API\V1\PropertyTypeController as PropertyTypeV1;
 use App\Http\Controllers\API\V2\PropertyTypeController as PropertyTypeV2;
 use Illuminate\Http\Request;
@@ -25,8 +25,8 @@ Route::delete('v2/propertiestypes/{propertyType}', [PropertyTypeV2::class,'destr
 //Route::apiResource('v1/propertiestypes', App\Http\Controllers\API\V1\PropertyTypeController::class);
 
 //countries Version 1
-Route::get('v1/countries', [CountriesV1::class,'index']);
-Route::post('v1/countries', [CountriesV1::class,'store']);
-Route::get('v1/countries/{countries}', [CountriesV1::class,'show']);
-Route::put('v1/countries/{countries}', [CountriesV1::class,'update']);
-Route::delete('v1/countries/{countries}', [CountriesV1::class,'destroy']);
+Route::get('v1/countries', [CountryV1::class,'index']);
+Route::post('v1/countries', [CountryV1::class,'store']);
+Route::get('v1/countries/{countries}', [CountryV1::class,'show']);
+Route::put('v1/countries/{countries}', [CountryV1::class,'update']);
+Route::delete('v1/countries/{countries}', [CountryV1::class,'destroy']);
