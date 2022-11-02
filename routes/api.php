@@ -30,6 +30,7 @@ Route::get('v1/countries', [CountryV1::class,'index']);
 Route::post('v1/countries', [CountryV1::class,'store']);
 Route::get('v1/countries/{CountryId}', [CountryV1::class,'show']);
 Route::put('v1/countries/{CountryId}', [CountryV1::class,'update']);
+Route::patch('v1/countries/{CountryId}', [CountryV1::class,'update']);
 Route::delete('v1/countries/{CountryId}', [CountryV1::class,'destroy']);
 
 //Room Type Version 1
