@@ -63,17 +63,17 @@ class PropertyTypeController extends Controller
         ],201);
     }
 
-    public function show(PropertyType $propertyType)
+    public function show(PropertyType $PropertyTypeId)
     {
         //return $propertyType;
         /*return response()->json([
             'res' => true,
             'property Type' => $propertyType
         ],200);*/
-        return response()->json(new PropertyTypeResource($propertyType),200);
+        return response()->json(new PropertyTypeResource($PropertyTypeId),200);
     }
 
-    public function update(Request $request, PropertyType $propertyType)
+    public function update(Request $request, PropertyType $PropertyTypeId)
     {
         /*$propertyType = PropertyType::findOrFail($propertyType);
         if ($request->hasFile('icon_image')){
@@ -92,7 +92,7 @@ class PropertyTypeController extends Controller
         }
         $propertyType->update($request->all());*/
 
-        $post=PropertyType::findOrFail($propertyType);
+        $post=PropertyType::findOrFail($PropertyTypeId);
      if($request->hasFile("icon_image")){
          if (File::exists("icon_image/".$post->icon_image)) {
              File::delete("icon_image/".$post->icon_image);
@@ -103,7 +103,7 @@ class PropertyTypeController extends Controller
          $request['icon_image']=$post->icon_image;
      }
      //$propertyType->update($request->all());
-     $propertyType->update([
+     $PropertyTypeId->update([
         "title" =>$request->title,
         "description"=>$request->description,
         "icon_image"=>$post->icon_image,
@@ -111,9 +111,9 @@ class PropertyTypeController extends Controller
     ]);
     }
 
-    public function destroy(PropertyType $propertyType)
+    public function destroy(PropertyType $PropertyTypeId)
     {
-        $propertyType->delete();
+        $PropertyTypeId->delete();
 
         return response()->json([
             'message' => 'Eliminado correctamente'

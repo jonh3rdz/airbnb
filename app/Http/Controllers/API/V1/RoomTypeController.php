@@ -37,9 +37,9 @@ class RoomTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RoomType $roomType)
+    public function show(RoomType $RoomTypeId)
     {
-        return response()->json(new RoomTypeResource($roomType),200);
+        return response()->json(new RoomTypeResource($RoomTypeId),200);
     }
 
     /**

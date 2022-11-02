@@ -19,7 +19,7 @@ class CountryResource extends JsonResource
             'name' => $this->name,
             'code' => $this->code,
             'status' => $this->status,
-            'created_at' => $this->created_at,
+            'created_at' => $this->created_at->format('d/m/Y'),
             /*'author' => [
                 'name' => $this->user->name,
                 'email' => $this->user->email,

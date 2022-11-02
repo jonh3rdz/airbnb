@@ -39,7 +39,7 @@ class PropertyTypeController extends Controller
         ],201);
     }
 
-    public function show(PropertyType $propertyType)
+    public function show(PropertyType $PropertyTypeId)
     {
         //return $propertyType;
         /*return response()->json([
@@ -47,12 +47,12 @@ class PropertyTypeController extends Controller
             'property Type' => $id
         ],200);*/
         //return PropertyType::find($id);
-        return response()->json(new PropertyTypeResource($propertyType),200);
+        return response()->json(new PropertyTypeResource($PropertyTypeId),200);
     }
 
-    public function update(UpdatePropertyTypeRequest $request, $id)
+    public function update(UpdatePropertyTypeRequest $request, $PropertyTypeId)
     {
-        $propertytype = PropertyType::findOrFail($id);
+        $propertytype = PropertyType::findOrFail($PropertyTypeId);
         if ($request->hasFile('icon_image')){
             if (File::exists("storage/icon_image/".$propertytype->icon_image)) {
                 File::delete("storage/icon_image/".$propertytype->icon_image);
@@ -76,9 +76,9 @@ class PropertyTypeController extends Controller
         ],200);
     }
 
-    public function destroy(PropertyType $request, $id)
+    public function destroy(PropertyType $request, $PropertyTypeId)
     {
-        $propertytype = PropertyType::findOrFail($id);
+        $propertytype = PropertyType::findOrFail($PropertyTypeId);
         
         if (File::exists("storage/icon_image/".$propertytype->icon_image)) {
             File::delete("storage/icon_image/".$propertytype->icon_image);
