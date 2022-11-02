@@ -39,8 +39,21 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 `Backend`
 
 Basic Command Examples
+
+API/V1/Countries
+Is the location where the files are created.
+API: Indicates that it is a resource of type api.
+V1: Indicates the version.
+Countries: Indicate the name of the resource.
+
 - Create a model with m for migration and f for factory -mf  [php artisan make:model API/V1/Countries -mf](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
 - Create a controller  [php artisan make:controller API/V1/CountriesController --api](https://laravel.com/docs/9.x/controllers#main-content) and --api for the [API resource controller](https://laravel.com/docs/9.x/controllers#api-resource-routes).
+
+- Create a resource to transform individual models  [php artisan make:resource API/V1/Countries/CountriesResource](https://laravel.com/docs/9.x/eloquent-resources#generating-resources).
+- Create a collection. If you want to customize the resource collection response  [php artisan make:resource API/V1/Countries/CountriesCollection](https://laravel.com/docs/9.x/eloquent-resources#resource-collections).
+- create a "request form" for validation and authorization rules in the store to save data  [php artisan make:request API/V1/Countries/StoreCountriesRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
+- create a "request form" for the validation and authorization rules in the store to update the data  [php artisan make:request API/V1/Countries/UpdateCountriesRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
+
 ```bash
 php artisan make:model API/V1/Countries -mf
 php artisan make:controller API/V1/CountriesController --api
