@@ -41,9 +41,13 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 Basic Command Examples
 
 API/V1/Countries
+
 Is the location where the files are created.
+
 API: Indicates that it is a resource of type api.
+
 V1: Indicates the version.
+
 Countries: Indicate the name of the resource.
 
 - Create a model with m for migration and f for factory -mf  [php artisan make:model API/V1/Countries -mf](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
