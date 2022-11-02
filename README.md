@@ -68,8 +68,7 @@ php artisan make:request API/V1/Countries/UpdateCountriesRequest
 ```
 
 
-Installation and execution
-
+`Installation and execution`
 ```bash
 git clone https://github.com/jmrz97/airbnb.git
 cd airbnb
