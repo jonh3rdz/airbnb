@@ -18,7 +18,7 @@ class PropertyTypeController extends Controller
         return new PropertyTypeCollection(PropertyType::all());
     }
 
-    public function store(Request $request)
+    public function store(StorePropertyTypeRequest $request)
     {
         $propertytype = new PropertyType($request->all());
 
