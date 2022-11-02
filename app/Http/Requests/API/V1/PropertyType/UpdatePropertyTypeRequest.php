@@ -13,7 +13,7 @@ class UpdatePropertyTypeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class UpdatePropertyTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|max:255',
+            'description' => 'required|max:255',
+            'icon_image' => 'required',
+            'status' => '',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required'    => 'El titulo es requerido.',
+            'description.required'    => 'La description es requerido.',
         ];
     }
 }
