@@ -26,7 +26,7 @@ class PropertyTypeController extends Controller
             $image = $request->file('icon_image');
             $ext = $image->extension();
             $file = time().'.'.$ext;
-            $image->storeAs('public/icon_image', $file);
+            $image->storeAs('public/PropertyType', $file);
             $propertytype->icon_image = $file;
         }
 
@@ -54,13 +54,13 @@ class PropertyTypeController extends Controller
     {
         $propertytype = PropertyType::findOrFail($PropertyTypeId);
         if ($request->hasFile('icon_image')){
-            if (File::exists("storage/icon_image/".$propertytype->icon_image)) {
-                File::delete("storage/icon_image/".$propertytype->icon_image);
+            if (File::exists("storage/PropertyType/".$propertytype->icon_image)) {
+                File::delete("storage/PropertyType/".$propertytype->icon_image);
             }
             $image = $request->file('icon_image');
             $ext = $image->extension();
             $file = time().'.'.$ext;
-            $image->storeAs('public/icon_image', $file);
+            $image->storeAs('public/PropertyType', $file);
             $propertytype->icon_image = $file;
 
             $request['icon_image'] = $propertytype->icon_image;
@@ -80,8 +80,8 @@ class PropertyTypeController extends Controller
     {
         $propertytype = PropertyType::findOrFail($PropertyTypeId);
         
-        if (File::exists("storage/icon_image/".$propertytype->icon_image)) {
-            File::delete("storage/icon_image/".$propertytype->icon_image);
+        if (File::exists("storage/PropertyType/".$propertytype->icon_image)) {
+            File::delete("storage/PropertyType/".$propertytype->icon_image);
         }
 
         $propertytype->delete();
