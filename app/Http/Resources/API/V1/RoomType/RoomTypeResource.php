@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\API\V1\PropertyType;
+namespace App\Http\Resources\API\V1\RoomType;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PropertyTypeResource extends JsonResource
+class RoomTypeResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

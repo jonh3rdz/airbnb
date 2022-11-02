@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\API\V1\Country;
+namespace App\Http\Resources\API\V1\RoomType;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class CountryCollection extends ResourceCollection
+class RoomTypeCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -22,7 +22,7 @@ class CountryCollection extends ResourceCollection
                     'Jonh Rdz'
                 ]
             ],
-            'type' => 'Countries'
+            'type' => 'Rooms Types'
         ];
     }
 }

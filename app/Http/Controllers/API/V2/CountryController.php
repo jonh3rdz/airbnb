@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\API\V1;
+namespace App\Http\Controllers\API\V2;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\API\V1\Country\CountryCollection;
 use App\Http\Resources\API\V1\Country\CountryResource;
 use App\Models\API\V1\Country;
 use Illuminate\Http\Request;
@@ -18,7 +17,6 @@ class CountryController extends Controller
     public function index()
     {
         return Country::all();
-        //return new CountryCollection(Country::all());
     }
 
     /**
@@ -29,30 +27,28 @@ class CountryController extends Controller
      */
     public function store(Request $request)
     {
-        $country = Country::created($request->all());
-        return $country;
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\API\V1\Country  $country
      * @return \Illuminate\Http\Response
      */
     public function show(Country $country)
     {
-        return $country;
-//        return response()->json(new CountryResource($country),200);
+        return response()->json(new CountryResource($country),200);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\API\V1\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Country $country)
     {
         //
     }
@@ -60,10 +56,10 @@ class CountryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\API\V1\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Country $country)
     {
         //
     }

@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\API\V1\Country\CountryCollection;
-use App\Http\Resources\API\V1\Country\CountryResource;
-use App\Models\API\V1\Country;
+use App\Http\Resources\API\V1\RoomType\RoomTypeCollection;
+use App\Http\Resources\API\V1\RoomType\RoomTypeResource;
+use App\Models\API\V1\RoomType;
 use Illuminate\Http\Request;
 
-class CountryController extends Controller
+class RoomTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,7 @@ class CountryController extends Controller
      */
     public function index()
     {
-        return Country::all();
-        //return new CountryCollection(Country::all());
+        return new RoomTypeCollection(RoomType::all());
     }
 
     /**
@@ -29,8 +28,7 @@ class CountryController extends Controller
      */
     public function store(Request $request)
     {
-        $country = Country::created($request->all());
-        return $country;
+        //
     }
 
     /**
@@ -39,10 +37,9 @@ class CountryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Country $country)
+    public function show(RoomType $roomType)
     {
-        return $country;
-//        return response()->json(new CountryResource($country),200);
+        return response()->json(new RoomTypeResource($roomType),200);
     }
 
     /**
