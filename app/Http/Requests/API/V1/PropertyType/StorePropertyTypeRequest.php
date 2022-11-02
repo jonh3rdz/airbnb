@@ -27,7 +27,7 @@ class StorePropertyTypeRequest extends FormRequest
             'title' => 'required|max:255',
             'description' => 'required|max:255',
             'icon_image' => 'required',
-            'status' => '',
+            'status',
         ];
     }
     
