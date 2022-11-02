@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\API\V1\Countries;
+namespace App\Http\Requests\API\V1\Country;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreCountriesRequest extends FormRequest
+class UpdateCountryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

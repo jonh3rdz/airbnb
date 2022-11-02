@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API\V1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CountriesController extends Controller
+class CountryController extends Controller
 {
     /**
      * Display a listing of the resource.

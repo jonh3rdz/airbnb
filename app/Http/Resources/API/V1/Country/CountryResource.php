@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\API\V1\Countries;
+namespace App\Http\Resources\API\V1\Country;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CountriesResource extends JsonResource
+class CountryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
