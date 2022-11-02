@@ -37,7 +37,24 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 ## Build Steps 
 
 `Backend`
+
+Basic Command Examples
+- Create a model with m for migration and f for factory -mf  [php artisan make:model API/V1/Countries -mf](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
+- Create a controller  [php artisan make:controller API/V1/CountriesController --api](https://laravel.com/docs/9.x/controllers#main-content) and --api for the [API resource controller](https://laravel.com/docs/9.x/controllers#api-resource-routes).
 ```bash
+php artisan make:model API/V1/Countries -mf
+php artisan make:controller API/V1/CountriesController --api
+php artisan make:resource API/V1/Countries/CountriesResource
+php artisan make:resource API/V1/Countries/CountriesCollection
+php artisan make:request API/V1/Countries/StoreCountriesRequest
+php artisan make:request API/V1/Countries/UpdateCountriesRequest
+```
+
+
+Installation and execution
+
+```bash
+git clone https://github.com/jmrz97/airbnb.git
 cd airbnb
 cp .env.example .env
 composer install
