@@ -50,7 +50,7 @@ V1: Indicates the version.
 
 Countries: Indicate the name of the resource.
 
-- Create a model with m for migration and f for factory -mf  [php artisan make:model API/V1/Countries -mf](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
+- Create a model with m for migration and f for factory and s for seeder -mfs  [php artisan make:model API/V1/Countries -mf](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
 - Create a controller  [php artisan make:controller API/V1/CountriesController --api](https://laravel.com/docs/9.x/controllers#main-content) and --api for the [API resource controller](https://laravel.com/docs/9.x/controllers#api-resource-routes).
 
 - Create a resource to transform individual models  [php artisan make:resource API/V1/Countries/CountriesResource](https://laravel.com/docs/9.x/eloquent-resources#generating-resources).
@@ -59,12 +59,12 @@ Countries: Indicate the name of the resource.
 - create a "request form" for the validation and authorization rules in the store to update the data  [php artisan make:request API/V1/Countries/UpdateCountriesRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
 
 ```bash
-php artisan make:model API/V1/Countries -mf
-php artisan make:controller API/V1/CountriesController --api
-php artisan make:resource API/V1/Countries/CountriesResource
-php artisan make:resource API/V1/Countries/CountriesCollection
-php artisan make:request API/V1/Countries/StoreCountriesRequest
-php artisan make:request API/V1/Countries/UpdateCountriesRequest
+php artisan make:model API/V1/Country -mfs
+php artisan make:controller API/V1/CountryController --api
+php artisan make:resource API/V1/Country/CountryResource
+php artisan make:resource API/V1/Country/CountryCollection
+php artisan make:request API/V1/Country/StoreCountryRequest
+php artisan make:request API/V1/Country/UpdateCountryRequest
 ```
 
 
