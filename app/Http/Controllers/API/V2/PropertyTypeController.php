@@ -68,6 +68,7 @@ class PropertyTypeController extends Controller
         
         $propertytype->update([$request->all(),
         "icon_image"=>$propertytype->icon_image,]);
+        
         return response()->json([
             'res' => true, //Retorna una respuesta
             'data' => $propertytype, //retorna toda la data en $propertyType
@@ -75,9 +76,15 @@ class PropertyTypeController extends Controller
         ],200);
     }
 
-    public function destroy(PropertyType $propertyType)
+    public function destroy(PropertyType $request, $id)
     {
-        $propertyType->delete();
+        $propertytype = PropertyType::findOrFail($id);
+        
+        if (File::exists("storage/icon_image/".$propertytype->icon_image)) {
+            File::delete("storage/icon_image/".$propertytype->icon_image);
+        }
+
+        $propertytype->delete();
 
         return response()->json([
             'message' => 'Eliminado correctamente'
