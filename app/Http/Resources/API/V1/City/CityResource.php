@@ -12,6 +12,7 @@ class CityResource extends JsonResource
             'id' => $this->id,
             'state' => [
                 'state' => $this->state->name,
+                'code' => $this->state->code,
             ],
             'name' => $this->name,
             'status' => $this->status,
