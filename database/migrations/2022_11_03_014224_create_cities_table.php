@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('state_id');
+            $table->string('name');
+            $table->string('status')->nullable()->default(1);
             $table->timestamps();
+
+            $table->foreign('state_id')->references('id')->on('states');
         });
     }
 

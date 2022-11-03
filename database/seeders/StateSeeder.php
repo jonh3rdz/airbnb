@@ -26,8 +26,8 @@ class StateSeeder extends Seeder
             ],
             [
                 'country_id' => 2,
-                'name' => 'Los Angeles',
-                'code' => 'LA',
+                'name' => 'California',
+                'code' => 'CA',
                 'status' => '1',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
