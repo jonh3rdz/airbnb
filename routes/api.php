@@ -6,6 +6,7 @@ use App\Http\Controllers\API\V1\CountryController as CountryV1; //Controlador Ve
 use App\Http\Controllers\API\V1\PropertyTypeController as PropertyTypeV1; //Controlador Version 1, PropertyType
 use App\Http\Controllers\API\V1\RoomTypeController as RoomTypeV1; //Controlador Version 1, RoomType
 use App\Http\Controllers\API\V1\StateController as StateV1; //Controlador Version 1, State
+use App\Http\Controllers\API\V1\SubcategoryController as SubcategoryV1; //Controlador Version 1, Subcategory
 use App\Http\Controllers\API\V2\PropertyTypeController as PropertyTypeV2; //Controlador Version 2, PropertyType
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -59,9 +60,16 @@ Route::put('v1/cities/{CityId}', [CityV1::class,'update']);
 Route::patch('v1/cities/{CityId}', [CityV1::class,'update']);
 Route::delete('v1/cities/{CityId}', [CityV1::class,'destroy']);
 
-//Room Type Version 1
+//Category Version 1
 Route::get('v1/categories', [CategoryV1::class,'index']);
 Route::post('v1/categories', [CategoryV1::class,'store']);
 Route::get('v1/categories/{CategoryId}', [CategoryV1::class,'show']);
 Route::put('v1/categories/{CategoryId}', [CategoryV1::class,'update']);
 Route::delete('v1/categories/{CategoryId}', [CategoryV1::class,'destroy']);
+
+//Subcategory Version 1
+Route::get('v1/subcategories', [SubcategoryV1::class,'index']);
+Route::post('v1/subcategories', [SubcategoryV1::class,'store']);
+Route::get('v1/subcategories/{SubcategoryId}', [SubcategoryV1::class,'show']);
+Route::put('v1/subcategories/{SubcategoryId}', [SubcategoryV1::class,'update']);
+Route::delete('v1/subcategories/{SubcategoryId}', [SubcategoryV1::class,'destroy']);
