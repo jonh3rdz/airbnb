@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('property_types')->insert([
+        DB::table('categories')->insert([
             [
                 'title' => 'Apartamentos',
                 'description' => 'Un apartamento o un piso es el hogar ideal lejos de casa para los viajeros que quieren tener su propio espacio al final del día.',

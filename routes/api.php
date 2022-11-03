@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\V1\CategoryController as CategoryV1; //Controlador Version 1, Category
 use App\Http\Controllers\API\V1\CityController as CityV1; //Controlador Version 1, City
 use App\Http\Controllers\API\V1\CountryController as CountryV1; //Controlador Version 1, Country
 use App\Http\Controllers\API\V1\PropertyTypeController as PropertyTypeV1; //Controlador Version 1, PropertyType
@@ -57,3 +58,10 @@ Route::get('v1/cities/{CityId}', [CityV1::class,'show']);
 Route::put('v1/cities/{CityId}', [CityV1::class,'update']);
 Route::patch('v1/cities/{CityId}', [CityV1::class,'update']);
 Route::delete('v1/cities/{CityId}', [CityV1::class,'destroy']);
+
+//Room Type Version 1
+Route::get('v1/categories', [CategoryV1::class,'index']);
+Route::post('v1/categories', [CategoryV1::class,'store']);
+Route::get('v1/categories/{CategoryId}', [CategoryV1::class,'show']);
+Route::put('v1/categories/{CategoryId}', [CategoryV1::class,'update']);
+Route::delete('v1/categories/{CategoryId}', [CategoryV1::class,'destroy']);

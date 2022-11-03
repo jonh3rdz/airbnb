@@ -14,6 +14,15 @@ class CategoryCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'data' => $this->collection,
+            'meta' => [
+                'Organization' => 'Aironb',
+                'authors' => [
+                    'Jonh Rdz'
+                ]
+            ],
+            'type' => 'Categories'
+        ];
     }
 }
