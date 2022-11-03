@@ -14,6 +14,20 @@ class StateResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'country' => [
+                'country' => $this->country->name,
+                'code' => $this->country->code,
+            ],
+            'name' => $this->name,
+            'code' => $this->code,
+            'status' => $this->status,
+            'created_at' => $this->created_at->format('d/m/Y'),
+            /*'author' => [
+                'name' => $this->user->name,
+                'email' => $this->user->email,
+            ],*/
+        ];
     }
 }

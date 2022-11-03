@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\V1\CountryController as CountryV1;
 use App\Http\Controllers\API\V1\PropertyTypeController as PropertyTypeV1;
 use App\Http\Controllers\API\V1\RoomTypeController as RoomTypeV1;
+use App\Http\Controllers\API\V1\StateController as StateV1;
 use App\Http\Controllers\API\V2\PropertyTypeController as PropertyTypeV2;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -39,3 +40,11 @@ Route::post('v1/roomstypes', [RoomTypeV1::class,'store']);
 Route::get('v1/roomstypes/{RoomTypeId}', [RoomTypeV1::class,'show']);
 Route::put('v1/roomstypes/{RoomTypeId}', [RoomTypeV1::class,'update']);
 Route::delete('v1/roomstypes/{RoomTypeId}', [RoomTypeV1::class,'destroy']);
+
+//countries Version 1
+Route::get('v1/states', [StateV1::class,'index']);
+Route::post('v1/states', [StateV1::class,'store']);
+Route::get('v1/states/{StateId}', [StateV1::class,'show']);
+Route::put('v1/states/{StateId}', [StateV1::class,'update']);
+Route::patch('v1/states/{StateId}', [StateV1::class,'update']);
+Route::delete('v1/states/{StateId}', [StateV1::class,'destroy']);
