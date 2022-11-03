@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\API\V1\CountryController as CountryV1;
-use App\Http\Controllers\API\V1\PropertyTypeController as PropertyTypeV1;
-use App\Http\Controllers\API\V1\RoomTypeController as RoomTypeV1;
-use App\Http\Controllers\API\V1\StateController as StateV1;
-use App\Http\Controllers\API\V2\PropertyTypeController as PropertyTypeV2;
+use App\Http\Controllers\API\V1\CityController as CityV1; //Controlador Version 1, City
+use App\Http\Controllers\API\V1\CountryController as CountryV1; //Controlador Version 1, Country
+use App\Http\Controllers\API\V1\PropertyTypeController as PropertyTypeV1; //Controlador Version 1, PropertyType
+use App\Http\Controllers\API\V1\RoomTypeController as RoomTypeV1; //Controlador Version 1, RoomType
+use App\Http\Controllers\API\V1\StateController as StateV1; //Controlador Version 1, State
+use App\Http\Controllers\API\V2\PropertyTypeController as PropertyTypeV2; //Controlador Version 2, PropertyType
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +27,7 @@ Route::put('v2/propertiestypes/{PropertyTypeId}', [PropertyTypeV2::class,'update
 Route::delete('v2/propertiestypes/{PropertyTypeId}', [PropertyTypeV2::class,'destroy']);
 //Route::apiResource('v1/propertiestypes', App\Http\Controllers\API\V1\PropertyTypeController::class);
 
-//countries Version 1
+//Country Version 1
 Route::get('v1/countries', [CountryV1::class,'index']);
 Route::post('v1/countries', [CountryV1::class,'store']);
 Route::get('v1/countries/{CountryId}', [CountryV1::class,'show']);
@@ -41,10 +42,18 @@ Route::get('v1/roomstypes/{RoomTypeId}', [RoomTypeV1::class,'show']);
 Route::put('v1/roomstypes/{RoomTypeId}', [RoomTypeV1::class,'update']);
 Route::delete('v1/roomstypes/{RoomTypeId}', [RoomTypeV1::class,'destroy']);
 
-//countries Version 1
+//State Version 1
 Route::get('v1/states', [StateV1::class,'index']);
 Route::post('v1/states', [StateV1::class,'store']);
 Route::get('v1/states/{StateId}', [StateV1::class,'show']);
 Route::put('v1/states/{StateId}', [StateV1::class,'update']);
 Route::patch('v1/states/{StateId}', [StateV1::class,'update']);
 Route::delete('v1/states/{StateId}', [StateV1::class,'destroy']);
+
+//City Version 1
+Route::get('v1/cities', [CityV1::class,'index']);
+Route::post('v1/cities', [CityV1::class,'store']);
+Route::get('v1/cities/{CityId}', [CityV1::class,'show']);
+Route::put('v1/cities/{CityId}', [CityV1::class,'update']);
+Route::patch('v1/cities/{CityId}', [CityV1::class,'update']);
+Route::delete('v1/cities/{CityId}', [CityV1::class,'destroy']);

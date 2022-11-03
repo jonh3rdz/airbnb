@@ -6,14 +6,20 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class CityResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
-     */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'state' => [
+                'state' => $this->state->name,
+            ],
+            'name' => $this->name,
+            'status' => $this->status,
+            'created_at' => $this->created_at->format('d/m/Y'),
+            /*'author' => [
+                'name' => $this->user->name,
+                'email' => $this->user->email,
+            ],*/
+        ];
     }
 }
