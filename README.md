@@ -50,13 +50,13 @@ V1: Indicates the version.
 
 Countries: Indicate the name of the resource.
 - The model is declared in the singular and the migration will be created in the plural (English), the other resources are declared in the singular.
-- Create a model with m for migration and f for factory and s for seeder -mfs  [php artisan make:model API/V1/Country -mf](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
-- Create a controller  [php artisan make:controller API/V1/CountriesController --api](https://laravel.com/docs/9.x/controllers#main-content) and --api for the [API resource controller](https://laravel.com/docs/9.x/controllers#api-resource-routes).
+- Create a model with m for migration and f for factory and s for seeder -mfs  [php artisan make:model API/V1/Country -mfs](https://laravel.com/docs/9.x/eloquent#generating-model-classes).
+- Create a controller  [php artisan make:controller API/V1/CountryController --api](https://laravel.com/docs/9.x/controllers#main-content) and --api for the [API resource controller](https://laravel.com/docs/9.x/controllers#api-resource-routes).
 
-- Create a resource to transform individual models  [php artisan make:resource API/V1/Countries/CountriesResource](https://laravel.com/docs/9.x/eloquent-resources#generating-resources).
-- Create a collection. If you want to customize the resource collection response  [php artisan make:resource API/V1/Countries/CountriesCollection](https://laravel.com/docs/9.x/eloquent-resources#resource-collections).
-- create a "request form" for validation and authorization rules in the store to save data  [php artisan make:request API/V1/Countries/StoreCountriesRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
-- create a "request form" for the validation and authorization rules in the store to update the data  [php artisan make:request API/V1/Countries/UpdateCountriesRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
+- Create a resource to transform individual models  [php artisan make:resource API/V1/Country/CountryResource](https://laravel.com/docs/9.x/eloquent-resources#generating-resources).
+- Create a collection. If you want to customize the resource collection response  [php artisan make:resource API/V1/Country/CountryCollection](https://laravel.com/docs/9.x/eloquent-resources#resource-collections).
+- create a "request form" for validation and authorization rules in the store to save data  [php artisan make:request API/V1/Country/StoreCountryRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
+- create a "request form" for the validation and authorization rules in the store to update the data  [php artisan make:request API/V1/Country/UpdateCountryRequest](https://laravel.com/docs/9.x/validation#creating-form-requests).
 
 ```bash
 php artisan make:model API/V1/Country -mfs
