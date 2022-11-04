@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('amenity_properties', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('amenity_id');
+            $table->unsignedBigInteger('property_id');
+            
             $table->timestamps();
+
+            $table->foreign('amenity_id')->references('id')->on('amenities');
+            $table->foreign('property_id')->references('id')->on('properties');
         });
     }
 
