@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\V1\AmenityController as AmenityV1; //Controlador Version 1, Amenity
 use App\Http\Controllers\API\V1\CategoryController as CategoryV1; //Controlador Version 1, Category
 use App\Http\Controllers\API\V1\CityController as CityV1; //Controlador Version 1, City
 use App\Http\Controllers\API\V1\CountryController as CountryV1; //Controlador Version 1, Country
@@ -73,3 +74,10 @@ Route::post('v1/subcategories', [SubcategoryV1::class,'store']);
 Route::get('v1/subcategories/{SubcategoryId}', [SubcategoryV1::class,'show']);
 Route::put('v1/subcategories/{SubcategoryId}', [SubcategoryV1::class,'update']);
 Route::delete('v1/subcategories/{SubcategoryId}', [SubcategoryV1::class,'destroy']);
+
+//Amenity Version 1
+Route::get('v1/amenities', [AmenityV1::class,'index']);
+Route::post('v1/amenities', [AmenityV1::class,'store']);
+Route::get('v1/amenities/{AmenityId}', [AmenityV1::class,'show']);
+Route::put('v1/amenities/{AmenityId}', [AmenityV1::class,'update']);
+Route::delete('v1/amenities/{AmenityId}', [AmenityV1::class,'destroy']);
