@@ -46,7 +46,7 @@ class CategoryController extends Controller
 
     public function update(UpdateCategoryRequest $request, $CategoryId)
     {
-        $Category = Category::findOrFail($CategoryId);
+        $Category=Category::findOrFail($CategoryId);
         if ($request->hasFile('icon_image')){
             if (File::exists("storage/Category/".$Category->icon_image)) {
                 File::delete("storage/Category/".$Category->icon_image);
@@ -59,15 +59,18 @@ class CategoryController extends Controller
 
             $request['icon_image'] = $Category->icon_image;
         }
+
+        $Category->update([
+            'title' =>$request->title,
+            "description"=>$request->description,
+            //$request->all(),
+            "icon_image"=>$Category->icon_image
+        ]);
         
-        $Category->update([$request->all(),
-        "icon_image"=>$Category->icon_image,]);
-        
-        return response()->json([
-            'res' => true, //Retorna una respuesta
-            'data' => $Category, //retorna toda la data
-            'msg' => 'Actualizado correctamente' //Retorna un mensaje
-        ],200);
+        return (new CategoryResource($Category))
+        ->additional(['msg' => 'Actualizado correctamente'])
+        ->response()
+        ->setStatusCode(202);
     }
 
     public function destroy(Category $request, $CategoryId)

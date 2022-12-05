@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('name'); //Nombre
             $table->text('description'); //Descripcion
-            $table->unsignedBigInteger('user_id'); //Usuario
+            $table->unsignedBigInteger('user_id')->nullable();; //Usuario
             $table->unsignedBigInteger('property_type_id')->nullable(); //Tipo de propiedad
-            $table->unsignedBigInteger('room_type_id'); //Tipo de habitación
-            $table->unsignedBigInteger('category_id'); //Categorías
-            $table->unsignedBigInteger('subcategory_id'); //Subcategorías
-            $table->unsignedBigInteger('country_id'); //País
-            $table->unsignedBigInteger('state_id'); //Estado o Departamento
-            $table->unsignedBigInteger('city_id'); //Ciudad o Municipio
+            $table->unsignedBigInteger('room_type_id')->nullable();; //Tipo de habitación
+            $table->unsignedBigInteger('category_id')->nullable();; //Categorías
+            $table->unsignedBigInteger('subcategory_id')->nullable();; //Subcategorías
+            $table->unsignedBigInteger('country_id')->nullable();; //País
+            $table->unsignedBigInteger('state_id')->nullable();; //Estado o Departamento
+            $table->unsignedBigInteger('city_id')->nullable();; //Ciudad o Municipio
             $table->text('address')->nullable(); //Direccion, Calle, Colonia, Pasaje, Casa, etc
             $table->string('latitude')->nullable(); //Latitud
             $table->string('longitude')->nullable(); //Longitud
@@ -32,10 +32,10 @@ return new class extends Migration
             $table->string('bedroom_count'); //Cantidad de habitaciones
             $table->string('bed_count'); //Cantidad de camas
             $table->string('bathroom_count'); //Cantidad de baños
-            $table->unsignedBigInteger('currency_id')->nullable(); //Divisa
-            $table->string("price"); ///Precio
+            $table->unsignedBigInteger('currency_id')->nullable()->default(null);; //Divisa
+            $table->string("price")->default(10); ///Precio
             $table->string("cover")->nullable(); ///Portada imagen
-            $table->string("refund_type")->nullable(); ///Reembolso
+            $table->string("refund_type")->nullable()->default(0); ///Reembolso
             $table->string('status')->nullable()->default(1); //Status
 
             $table->timestamps(); //created_at y update_at

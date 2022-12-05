@@ -28,5 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(SubcategorySeeder::class);
         $this->call(AmenitySeeder::class);
+
+        $this->call(PropertySeeder::class);
     }
 }

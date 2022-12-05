@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\API\V1\Country;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class StateSeeder extends Seeder
     {
         DB::table('states')->insert([
             [
-                'country_id' => 1,
+                'country_id' => Country::all()->random()->id,
                 'name' => 'San Miguel',
                 'code' => 'SM',
                 'status' => '1',
@@ -25,17 +26,25 @@ class StateSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s')
             ],
             [
-                'country_id' => 2,
-                'name' => 'California',
-                'code' => 'CA',
+                'country_id' => Country::all()->random()->id,
+                'name' => 'Usulutan',
+                'code' => 'USU',
                 'status' => '1',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
             ],
             [
-                'country_id' => 3,
-                'name' => 'Ciudad de Mexico',
-                'code' => 'CDMX',
+                'country_id' => Country::all()->random()->id,
+                'name' => 'Morazan',
+                'code' => 'MOR',
+                'status' => '1',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            ],
+            [
+                'country_id' => Country::all()->random()->id,
+                'name' => 'La Unión',
+                'code' => 'UNI',
                 'status' => '1',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')

@@ -93,22 +93,22 @@ class PropertyTypeController extends Controller
         $propertyType->update($request->all());*/
 
         $post=PropertyType::findOrFail($PropertyTypeId);
-     if($request->hasFile("icon_image")){
-         if (File::exists("icon_image/".$post->icon_image)) {
-             File::delete("icon_image/".$post->icon_image);
-         }
-         $file=$request->file("icon_image");
-         $post->icon_image=time()."_".$file->getClientOriginalName();
-         $file->move(\public_path("/public/property_type/"),$post->icon_image);
-         $request['icon_image']=$post->icon_image;
-     }
-     //$propertyType->update($request->all());
-     $PropertyTypeId->update([
-        "title" =>$request->title,
-        "description"=>$request->description,
-        "icon_image"=>$post->icon_image,
-        "status"=>$request->status,
-    ]);
+        if($request->hasFile("icon_image")){
+            if (File::exists("icon_image/".$post->icon_image)) {
+                File::delete("icon_image/".$post->icon_image);
+            }
+            $file=$request->file("icon_image");
+            $post->icon_image=time()."_".$file->getClientOriginalName();
+            $file->move(\public_path("/public/property_type/"),$post->icon_image);
+            $request['icon_image']=$post->icon_image;
+        }
+        //$propertyType->update($request->all());
+        $PropertyTypeId->update([
+            "title" =>$request->title,
+            "description"=>$request->description,
+            "icon_image"=>$post->icon_image,
+            "status"=>$request->status,
+        ]);
     }
 
     public function destroy(PropertyType $PropertyTypeId)

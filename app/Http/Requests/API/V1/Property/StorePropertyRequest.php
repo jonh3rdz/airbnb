@@ -6,25 +6,44 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StorePropertyRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
-     */
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'user_id',
+            'property_type_id',
+            'room_type_id',
+            'category_id',
+            'subcategory_id',
+            'country_id',
+            'state_id',
+            'city_id',
+            'address',
+            'latitude',
+            'longitude',
+            'accommodate_count',
+            'bedroom_count',
+            'bed_count',
+            'bathroom_count',
+            'currency_id',
+            'price',
+            'cover',
+            'refund_type',
+            'status',
+        ];
+    }
+    
+    public function messages()
+    {
+        return [
+            'name.required'    => 'El titulo es requerido.',
+            'description.required'    => 'La description es requerido.',
         ];
     }
 }

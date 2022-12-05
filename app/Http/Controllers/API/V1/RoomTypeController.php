@@ -46,7 +46,7 @@ class RoomTypeController extends Controller
 
     public function update(UpdateRoomTypeRequest $request, $RoomTypeId)
     {
-        $RoomType = RoomType::findOrFail($RoomTypeId);
+        $RoomType=RoomType::findOrFail($RoomTypeId);
         if ($request->hasFile('icon_image')){
             if (File::exists("storage/RoomType/".$RoomType->icon_image)) {
                 File::delete("storage/RoomType/".$RoomType->icon_image);
@@ -59,15 +59,18 @@ class RoomTypeController extends Controller
 
             $request['icon_image'] = $RoomType->icon_image;
         }
+
+        $RoomType->update([
+            'title' =>$request->title,
+            "description"=>$request->description,
+            //$request->all(),
+            "icon_image"=>$RoomType->icon_image
+        ]);
         
-        $RoomType->update([$request->all(),
-        "icon_image"=>$RoomType->icon_image,]);
-        
-        return response()->json([
-            'res' => true, //Retorna una respuesta
-            'data' => $RoomType, //retorna toda la data
-            'msg' => 'Actualizado correctamente' //Retorna un mensaje
-        ],200);
+        return (new RoomTypeResource($RoomType))
+        ->additional(['msg' => 'Actualizado correctamente'])
+        ->response()
+        ->setStatusCode(202);
     }
 
     public function destroy(RoomType $request, $RoomTypeId)

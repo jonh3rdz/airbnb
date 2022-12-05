@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('currencies', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->default('Dollar');
+            $table->string('code')->default('USD');
             $table->string('icon_image')->nullable();
             $table->string('status')->nullable()->default(1);
             $table->timestamps();

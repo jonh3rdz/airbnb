@@ -22,10 +22,10 @@ class PropertyType extends Model
         'updated_at'
     ];
 
-    public function getPublishedAtAttribute()
-    {
-        return $this->created_at->format('d/m/Y');
-    }
+    // public function getPublishedAtAttribute()
+    // {
+    //     return $this->created_at->format('d/m/Y');
+    // }
 
     /*public function user()
     {

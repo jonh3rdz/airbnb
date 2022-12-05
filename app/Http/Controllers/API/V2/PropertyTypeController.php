@@ -52,28 +52,31 @@ class PropertyTypeController extends Controller
 
     public function update(UpdatePropertyTypeRequest $request, $PropertyTypeId)
     {
-        $propertytype = PropertyType::findOrFail($PropertyTypeId);
+        $PropertyType=PropertyType::findOrFail($PropertyTypeId);
         if ($request->hasFile('icon_image')){
-            if (File::exists("storage/PropertyType/".$propertytype->icon_image)) {
-                File::delete("storage/PropertyType/".$propertytype->icon_image);
+            if (File::exists("storage/PropertyType/".$PropertyType->icon_image)) {
+                File::delete("storage/PropertyType/".$PropertyType->icon_image);
             }
             $image = $request->file('icon_image');
             $ext = $image->extension();
             $file = time().'.'.$ext;
             $image->storeAs('public/PropertyType', $file);
-            $propertytype->icon_image = $file;
+            $PropertyType->icon_image = $file;
 
-            $request['icon_image'] = $propertytype->icon_image;
+            $request['icon_image'] = $PropertyType->icon_image;
         }
+
+        $PropertyType->update([
+            'title' =>$request->title,
+            "description"=>$request->description,
+            //$request->all(),
+            "icon_image"=>$PropertyType->icon_image
+        ]);
         
-        $propertytype->update([$request->all(),
-        "icon_image"=>$propertytype->icon_image,]);
-        
-        return response()->json([
-            'res' => true, //Retorna una respuesta
-            'data' => $propertytype, //retorna toda la data en $propertyType
-            'msg' => 'Guardado correctamente' //Retorna un mensaje
-        ],200);
+        return (new PropertyTypeResource($PropertyType))
+        ->additional(['msg' => 'Actualizado correctamente'])
+        ->response()
+        ->setStatusCode(202);
     }
 
     public function destroy(PropertyType $request, $PropertyTypeId)

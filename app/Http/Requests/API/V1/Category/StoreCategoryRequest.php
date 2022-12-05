@@ -16,7 +16,7 @@ class StoreCategoryRequest extends FormRequest
         return [
             'title' => 'required|max:255',
             'description' => 'required|max:255',
-            'icon_image' => 'required',
+            'icon_image' => '',
             'status',
         ];
     }

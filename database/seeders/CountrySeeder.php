@@ -23,20 +23,6 @@ class CountrySeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
             ],
-            [
-                'name' => 'Estados Unidos',
-                'code' => 'US',
-                'status' => '1',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-            ],
-            [
-                'name' => 'Mexico',
-                'code' => 'MX',
-                'status' => '1',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-            ],
         ]);
     }
 }
