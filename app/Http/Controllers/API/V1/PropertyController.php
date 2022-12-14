@@ -8,8 +8,10 @@ use App\Http\Requests\API\V1\Property\UpdatePropertyRequest;
 use App\Http\Resources\API\V1\Property\PropertyCollection;
 use App\Http\Resources\API\V1\Property\PropertyResource;
 use App\Models\API\V1\Property;
+use App\Models\API\V1\PropertyImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
 {
@@ -37,6 +39,18 @@ class PropertyController extends Controller
 
         $Property->save();
 
+        if($request->hasFile("property_images")){
+            $path=$request->file("property_images");
+            foreach($path as $path){
+                $imageName=time().'_'.$path->getClientOriginalName();
+                $request['property_id']=$Property->id;
+                $request['property_image']=$imageName;
+                $path->move(\public_path("storage/Property_images"),$imageName);
+                PropertyImage::create($request->all());
+
+            }
+        }
+
         return response()->json([
             'res' => true, //Retorna una respuesta
             'data' => $Property, //retorna toda la data
@@ -46,7 +60,33 @@ class PropertyController extends Controller
 
     public function show(Property $PropertyId)
     {
-        return response()->json(new PropertyResource($PropertyId),200);
+        $imagenes = DB::select("SELECT property_images.id, property_images.property_image	
+        FROM properties
+        INNER JOIN property_images ON properties.id = property_images.property_id
+        WHERE properties.id = $PropertyId->id");
+        
+        return response()->json([
+            'data' => new PropertyResource($PropertyId),
+            'res' => true, //Retorna una respuesta
+            //'data' => new PropertyResource($PropertyId), //retorna toda la data
+            'images' => $imagenes,
+        ],200);
+        //return response()->json(new PropertyResource($PropertyId),200);
+    }
+
+    public function images()
+    {
+        $imagenes = DB::select('SELECT property_images.property_image
+			
+        FROM properties
+        INNER JOIN property_images ON properties.id = property_images.property_id
+        
+        WHERE properties.id = property_images.property_id');
+        
+        return response()->json([
+            'res' => true, //Retorna una respuesta
+            'data' => $imagenes, //retorna toda la data
+        ],200);
     }
 
     public function update(UpdatePropertyRequest $request, $PropertyId)

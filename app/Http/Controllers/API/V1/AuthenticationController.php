@@ -24,10 +24,12 @@ class AuthenticationController extends Controller
 
         $token = $user->createToken($request->email)->plainTextToken;
 
+        //$user->assignRole('invitado');
+
         return response()->json([
             'res' => true,
             'token' => $token,
-            'user' => $user,
+            'usuario' => $user,
             'msg' => 'Registrado correctamente'
         ],200);
     }
