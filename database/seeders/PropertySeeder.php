@@ -123,7 +123,7 @@ class PropertySeeder extends Seeder
                 'bed_count' => 6, //Cantidad de camas
                 'bathroom_count' => 6, //Cantidad de baños
                 'price' => 45, ///Precio
-                'cover' => '5.jpg',
+                'cover' => '14.webp',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
             ],

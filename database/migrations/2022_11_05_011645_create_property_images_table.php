@@ -20,7 +20,7 @@ return new class extends Migration
             //$table->foreignId("property_id")->constraint("property_id")->onDelete("cascade");
             $table->timestamps();
 
-            $table->foreign('property_id')->references('id')->on('properties');
+            $table->foreign('property_id')->references('id')->on('properties')->onDelete("cascade");
         });
     }
 

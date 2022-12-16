@@ -20,6 +20,7 @@ class AuthenticationController extends Controller
         $user->lastname = $request->lastname;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->role = 'isGuest';
         $user->save();
 
         $token = $user->createToken($request->email)->plainTextToken;

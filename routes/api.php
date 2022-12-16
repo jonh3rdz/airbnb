@@ -101,6 +101,7 @@ function(){
     //Property Version 1
     Route::get('properties', [PropertyV1::class,'index']);
     Route::post('properties', [PropertyV1::class,'store']);
+    Route::post('propertiesrole/{PropertyId}', [PropertyV1::class,'updaterole']);
     Route::get('properties/{PropertyId}', [PropertyV1::class,'show']); 
     Route::put('properties/{PropertyId}', [PropertyV1::class,'update']);
     Route::delete('properties/{PropertyId}', [PropertyV1::class,'destroy']);

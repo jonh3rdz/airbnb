@@ -50,7 +50,7 @@ class Property extends Model
 
     //relacion a users inversa
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\User');
     }
 
     //relacion a property_types inversa

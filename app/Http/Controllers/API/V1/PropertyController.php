@@ -9,6 +9,7 @@ use App\Http\Resources\API\V1\Property\PropertyCollection;
 use App\Http\Resources\API\V1\Property\PropertyResource;
 use App\Models\API\V1\Property;
 use App\Models\API\V1\PropertyImage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
@@ -28,6 +29,7 @@ class PropertyController extends Controller
     public function store(StorePropertyRequest $request)
     {
         $Property = new Property($request->all());
+        $this->authorize('create', $Property);
 
         if ($request->hasFile('cover')) {
             $image = $request->file('cover');
@@ -89,9 +91,24 @@ class PropertyController extends Controller
         ],200);
     }
 
+    public function updaterole(Request $request, User $PropertyId)
+    {
+        // $Property=Property::findOrFail($PropertyId);
+        $Property = DB::update("UPDATE users
+        SET role = 'isHost'
+        WHERE users.id = $PropertyId->id");
+        
+        return response()->json([
+            'res' => true, //Retorna una respuesta
+            'data' => $Property, //retorna toda la data
+        ],200);
+    }
+
     public function update(UpdatePropertyRequest $request, $PropertyId)
     {
         $Property=Property::findOrFail($PropertyId);
+        $this->authorize('update', $Property);
+
         if ($request->hasFile('cover')){
             if (File::exists("storage/Cover/".$Property->cover)) {
                 File::delete("storage/Cover/".$Property->cover);
@@ -137,7 +154,8 @@ class PropertyController extends Controller
     public function destroy(Property $request, $PropertyId)
     {
         $Property = Property::findOrFail($PropertyId);
-        
+        $this->authorize('delete', $Property);
+
         if (File::exists("storage/Cover/".$Property->cover)) {
             File::delete("storage/Cover/".$Property->cover);
         }
