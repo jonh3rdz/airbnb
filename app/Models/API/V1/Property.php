@@ -32,6 +32,7 @@ class Property extends Model
         'currency_id',
         'price',
         'cover',
+        'property_images[]',
         'refund_type',
         'status',
     ];

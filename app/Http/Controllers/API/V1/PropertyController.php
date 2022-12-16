@@ -144,6 +144,28 @@ class PropertyController extends Controller
             //$request->all(),
             'cover'=>$Property->cover
         ]);
+
+        PropertyImage::where('property_id', $PropertyId)->delete();
+        // $imagesd=PropertyImage::where("property_id",$Property->id)->get();
+        //     foreach($imagesd as $imaged){
+        //         if (File::exists("public/Property_images/".$imaged->property_image)) {
+        //             File::delete("public/Property_images/".$imaged->property_image);
+        //         }
+        //     }
+
+            if($request->hasFile("property_images")){
+                $path=$request->file("property_images");
+                foreach($path as $path){
+                    $imageName=time().'_'.$path->getClientOriginalName();
+                    $request['property_id']=$Property->id;
+                    $request['property_image']=$imageName;
+                    $path->move(\public_path("storage/Property_images"),$imageName);
+                    PropertyImage::create($request->all());
+    
+                }
+            }
+
+
         
         return (new PropertyResource($Property))
         ->additional(['msg' => 'Actualizado correctamente'])
