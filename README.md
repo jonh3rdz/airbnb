@@ -74,7 +74,6 @@ git clone https://github.com/jmrz97/airbnb.git
 cd airbnb
 cp .env.example .env
 composer install
-npm install
 ```
 
 create a local databse according to your prefer name, then 
