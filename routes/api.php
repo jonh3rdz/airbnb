@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\V1\AmenityController as AmenityV1; //Controlador Version 1, Amenity
 use App\Http\Controllers\API\V1\AuthenticationController;
+use App\Http\Controllers\API\V1\BookingController as BookingV1; //Controlador Reservaciones
 use App\Http\Controllers\API\V1\CategoryController as CategoryV1; //Controlador Version 1, Category
 use App\Http\Controllers\API\V1\CityController as CityV1; //Controlador Version 1, City
 use App\Http\Controllers\API\V1\CountryController as CountryV1; //Controlador Version 1, Country
@@ -34,6 +35,7 @@ Route::group(['prefix'=>'v1','middleware'=> ['auth:sanctum']],
 function(){
     //
     Route::get('homeusers', [PropertyV1::class,'propertyuser']);
+    Route::get('search/properties/{field}/{query}', [PropertyV1::class,'search']);
     //cerrar sesion
     Route::post('cerrarsesion',[AuthenticationController::class,'cerrarSesion']);
 
@@ -105,6 +107,15 @@ function(){
     Route::get('properties/{PropertyId}', [PropertyV1::class,'show']); 
     Route::put('properties/{PropertyId}', [PropertyV1::class,'update']);
     Route::delete('properties/{PropertyId}', [PropertyV1::class,'destroy']);
+
+    //Booking Version 1
+    Route::get('bookings', [BookingV1::class,'index']);
+    Route::get('bookingsuser', [BookingV1::class,'bookinguser']);
+    Route::post('bookings', [BookingV1::class,'store']);
+    Route::post('bookings/{BookingId}', [BookingV1::class,'updaterole']);
+    Route::get('bookings/{BookingId}', [BookingV1::class,'show']); 
+    Route::put('bookings/{BookingId}', [BookingV1::class,'update']);
+    Route::delete('bookings/{BookingId}', [BookingV1::class,'destroy']);
 });
 
 Route::group(['prefix'=>'v2','middleware'=> ['auth:sanctum']],

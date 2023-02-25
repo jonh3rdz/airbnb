@@ -33,5 +33,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AmenitySeeder::class);
 
         $this->call(PropertySeeder::class);
+        $this->call(PropertyImagesSeeder::class);
+        $this->call(BookingSeeder::class);
     }
 }

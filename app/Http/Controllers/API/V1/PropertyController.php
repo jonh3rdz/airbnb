@@ -23,7 +23,13 @@ class PropertyController extends Controller
 
     public function propertyuser()
     {
-        return new PropertyCollection(Property::where('user_id', auth()->user()->id)->paginate(20));
+        return new PropertyCollection(Property::all()->where('user_id', auth()->user()->id)); //sin paginar
+        //return new PropertyCollection(Property::where('user_id', auth()->user()->id)->paginate(20)); //paginar
+    }
+
+    public function search($field, $query)
+    {
+        return new PropertyCollection(Property::where($field, 'LIKE', "%$query%")->latest()->paginate(10));
     }
 
     public function store(StorePropertyRequest $request)
