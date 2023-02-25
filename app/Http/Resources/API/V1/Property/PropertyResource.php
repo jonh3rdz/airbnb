@@ -27,16 +27,16 @@ class PropertyResource extends JsonResource
             // 'City' => [
             //     'City' => $this->city->name,
             // ],
-            // 'address' => $this->address,
-            'location' => [
-                'country_id' => $this->country->id,
-                'country' => $this->country->name,
-                'state_id' => $this->state->id,
-                'state' => $this->state->name,
-                'city_id' => $this->city->id,
-                'city' => $this->city->name,
-                'address' => $this->address,
-            ],
+            'address' => $this->address,
+            // 'location' => [
+            //     'country_id' => $this->country->id,
+            //     'country' => $this->country->name,
+            //     'state_id' => $this->state->id,
+            //     'state' => $this->state->name,
+            //     'city_id' => $this->city->id,
+            //     'city' => $this->city->name,
+            //     'address' => $this->address,
+            // ],
             'country' => [
                 'country_id' => $this->country->id,
                 'country' => $this->country->name,

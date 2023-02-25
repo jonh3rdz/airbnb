@@ -1,0 +1,2489 @@
+{
+	"info": {
+		"_postman_id": "35ebafc6-62c7-4114-a690-409c4759f301",
+		"name": "aironb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22928567"
+	},
+	"item": [
+		{
+			"name": "PropertyTypes",
+			"item": [
+				{
+					"name": "PropertiesTypes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v2/propertiestypes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v2",
+								"propertiestypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PropertiesTypes/{PropertyTypeId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v2/propertiestypes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v2",
+								"propertiestypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PropertiesTypes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vivienda anexada",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una vivienda anexada",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/10.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v2/propertiestypes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v2",
+								"propertiestypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PropertiesTypes/{PropertyTypeId}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vivienda anexada actualizada Test2",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una vivienda anexada actualizada Test",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/15.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v2/propertiestypes/4?_method=put",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v2",
+								"propertiestypes",
+								"4"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PropertiesTypes/{PropertyTypeId}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v2/propertiestypes/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v2",
+								"propertiestypes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RoomTypes",
+			"item": [
+				{
+					"name": "RoomTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes/{RoomTypeId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Una habitacion para 3",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una habitacion para 2 personas",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/14.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes/{RoomTypeId}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Una habitacion para 5",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una habitacion para 5 personas",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/4?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								"4"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes/{RoomTypeId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/countries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Countries/{CountryId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/countries/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Countries",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Guatemala\",\r\n    \"code\" : \"GT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/countries/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"countries",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Countries/{CountryId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Argentina\",\r\n    \"code\" : \"AR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/countries/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"countries",
+								"2"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Countries/{CountryId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/countries/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"countries",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "States",
+			"item": [
+				{
+					"name": "States",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/states/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"states",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "States/{StateId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/states/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"states",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "States/{StateId}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country_id\" : \"1\",\r\n    \"name\" : \"Usulutan\",\r\n    \"code\" : \"US\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/states/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"states",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "States/{StateId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country_id\" : \"1\",\r\n    \"name\" : \"Usulután\",\r\n    \"code\" : \"US\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/states/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"states",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "States/{StateId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/states/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"states",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cities/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cities/{CityId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cities/{CityId}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_id\" : \"1\",\r\n    \"name\" : \"Ciudad Barrios\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cities/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cities/{CityId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_id\" : \"1\",\r\n    \"name\" : \"San Rafael Oriente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cities/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cities/{CityId}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cities/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories/{CategoryId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|iM9VPHQel2GMp0VIIANuE0C4htHvRo7LbuG5UqtD",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vivienda anexada",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una vivienda anexada",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/10.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories/{CategoryId}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vivienda anexada actualizada Test",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una vivienda anexada actualizada Test",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/14.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/4?_method=put",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"4"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories/{CategoryId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subcategories",
+			"item": [
+				{
+					"name": "Subcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/subcategories/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"subcategories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subcategory/{SubcategoryId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/subcategories/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"subcategories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subcategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\" : \"3\",\r\n    \"title\" : \"Barco\",\r\n    \"description\" : \"Un barco, velero o yate que permanece anclado durante la estadía de los huéspedes. No es una casa flotante.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/subcategories/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"subcategories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subcategory/{SubcategoryId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\" : \"1\",\r\n    \"title\" : \"Loft\",\r\n    \"description\" : \"Un apartamento o condominio de diseño abierto, que puede tener paredes interiores cortas..\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/subcategories/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"subcategories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subcategory/{SubcategoryId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/subcategories/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"subcategories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Amenities",
+			"item": [
+				{
+					"name": "RoomTypes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes/{RoomTypeId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Una habitacion para 3",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una habitacion para 2 personas",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/andrea-davis-NngNVT74o6s-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes/{RoomTypeId}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Una habitacion para 2",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Una habitacion para 2 personas",
+									"type": "default"
+								},
+								{
+									"key": "icon_image",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/roberto-nickson-so3wgJLwDxo-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/4?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								"4"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RoomsTypes/{RoomTypeId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/roomstypes/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"roomstypes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "properties",
+			"item": [
+				{
+					"name": "properties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "properties/{property}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jonh Rodriguez",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "j.rodriguez2018ng@gmail.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update/{role}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|XpMoX4W8AXMzPSkJT5ymJ3CsztrtyGJHTH46sIyv",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jonh Rodriguez",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "j.rodriguez2018ng@gmail.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/propertiesrole/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"propertiesrole",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "properties",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|VLafN3MLij1u4EkRUd4H4eemulXmZ6pNeYTZR4m2",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mi nueva propiedad",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Mi nueva propiedad creada con exito",
+									"type": "default"
+								},
+								{
+									"key": "property_type_id",
+									"value": "3",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "room_type_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "subcategory_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "city_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "address",
+									"value": "3° calle oriente, Colonia El naranjo, Pasaje N° 7, Casa N° 37",
+									"type": "default"
+								},
+								{
+									"key": "longitude",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "latitude",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "accommodate_count",
+									"value": "12",
+									"type": "default"
+								},
+								{
+									"key": "bedroom_count",
+									"value": "8",
+									"type": "default"
+								},
+								{
+									"key": "bed_count",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "bathroom_count",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "default"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/15.webp"
+								},
+								{
+									"key": "property_images[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/jrodr/Desktop/Imagenes/1.jpg",
+										"/C:/Users/jrodr/Desktop/Imagenes/2.jpg",
+										"/C:/Users/jrodr/Desktop/Imagenes/3.jpg",
+										"/C:/Users/jrodr/Desktop/Imagenes/4.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "properties/{property}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|VLafN3MLij1u4EkRUd4H4eemulXmZ6pNeYTZR4m2",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mi nueva propiedad actualizada 17",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Mi nueva propiedad actualizada con exito",
+									"type": "default"
+								},
+								{
+									"key": "property_type_id",
+									"value": "3",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "room_type_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "subcategory_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "city_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "address",
+									"value": "3° calle oriente, Colonia El naranjo, Pasaje N° 7, Casa N° 37",
+									"type": "default"
+								},
+								{
+									"key": "longitude",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "latitude",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "accommodate_count",
+									"value": "12",
+									"type": "default"
+								},
+								{
+									"key": "bedroom_count",
+									"value": "8",
+									"type": "default"
+								},
+								{
+									"key": "bed_count",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "bathroom_count",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "default"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/12.webp"
+								},
+								{
+									"key": "property_images[]",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties/24?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties",
+								"24"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "properties/{property}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|bjSL1LUWmYxySXLoAQ2cpCgNxHvs2Rjx2O4viTr0",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/home",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"home"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Booking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookings/{booking}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jonh Rodriguez",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "j.rodriguez2018ng@gmail.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookingsuser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookingsuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|VLafN3MLij1u4EkRUd4H4eemulXmZ6pNeYTZR4m2",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "property_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "dateini",
+									"value": "2023-01-20",
+									"type": "default"
+								},
+								{
+									"key": "datefini",
+									"value": "2023-01-26",
+									"type": "default"
+								},
+								{
+									"key": "total_days",
+									"value": "6",
+									"type": "default"
+								},
+								{
+									"key": "price_per_day",
+									"value": "25",
+									"type": "default"
+								},
+								{
+									"key": "price_for_stay",
+									"value": "150",
+									"type": "default"
+								},
+								{
+									"key": "cleaning_fee",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "service_fee",
+									"value": "30",
+									"type": "default"
+								},
+								{
+									"key": "price_total",
+									"value": "200",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "properties/{property}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|VLafN3MLij1u4EkRUd4H4eemulXmZ6pNeYTZR4m2",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mi nueva propiedad actualizada 17",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Mi nueva propiedad actualizada con exito",
+									"type": "default"
+								},
+								{
+									"key": "property_type_id",
+									"value": "3",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "room_type_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "subcategory_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "city_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "address",
+									"value": "3° calle oriente, Colonia El naranjo, Pasaje N° 7, Casa N° 37",
+									"type": "default"
+								},
+								{
+									"key": "longitude",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "latitude",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "accommodate_count",
+									"value": "12",
+									"type": "default"
+								},
+								{
+									"key": "bedroom_count",
+									"value": "8",
+									"type": "default"
+								},
+								{
+									"key": "bed_count",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "bathroom_count",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "default"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/12.webp"
+								},
+								{
+									"key": "property_images[]",
+									"type": "file",
+									"src": "/C:/Users/jrodr/Desktop/Imagenes/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties/24?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties",
+								"24"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "properties/{property}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|bjSL1LUWmYxySXLoAQ2cpCgNxHvs2Rjx2O4viTr0",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/properties/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"properties",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/home",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"home"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "registro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Jonh\",\r\n    \"lastname\" : \"MRdz\",\r\n    \"email\" : \"j.rodriguez2018ng@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "acceso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"j.rodriguez2018ng@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cerrarsesion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer 17|L1PSl3NKYOx4zyKxfcma6HXdLW3ghSvZyY2Eb6K0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cerrarsesion",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cerrarsesion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1|wDBT63kxl6Eb9AQrxkWqiUbpc0GEdIEMT1X1eZNH",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
