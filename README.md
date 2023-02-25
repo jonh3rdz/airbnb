@@ -86,6 +86,11 @@ php artisan migrate
 php artisan storage:link
 ```
 
+`Installation of the routes`
+```bash
+the paths in the aironb.postman_collection.json file will be updated very soon.
+```
+
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
